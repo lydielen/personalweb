@@ -1,3 +1,7 @@
+/* Import Blackletter-style font (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+/* Home Section */
 .home {
   position: relative;
   min-height: 100vh;
@@ -11,6 +15,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* Font and color styling */
+  font-family: "UnifrakturCook", "Old English Text MT", "Blackletter", "Gothic", serif;
+  color: white;
 }
 
 /* Overlay for text readability */
@@ -24,7 +32,7 @@
   z-index: 1;
 }
 
-/* Content */
+/* Content container */
 .content {
   position: relative;
   z-index: 2;
@@ -33,12 +41,35 @@
   max-width: 800px;
 }
 
+/* Headings */
 .content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-family: "UnifrakturCook", "Old English Text MT", "Blackletter", "Gothic", serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* Paragraph text */
 .content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  font-family: "UnifrakturCook", "Old English Text MT", "Blackletter", "Gothic", serif;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Optional: Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  animation: fadeIn 1.5s ease-in-out;
 }
